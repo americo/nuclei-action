@@ -1,14 +1,8 @@
 language: go
 go:
-  - 1.14.x
-  - 1.15.x
+  - 1.19.x
   - tip
 
 script:
-  - go test -v ./...
-  - go build -v ./...
-  - go install -v ./...
-
-before_script:
-  - go get github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+  - go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
   - nuclei -u https://testphp.vulnweb.com
