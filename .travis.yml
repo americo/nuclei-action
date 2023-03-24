@@ -3,8 +3,6 @@ go:
   - 1.19.x
   - tip
 
-install: travis_wait 60 mvn install
-
 script:
   - go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
   - nuclei -l urls.txt
