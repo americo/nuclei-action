@@ -5,4 +5,4 @@ go:
 
 script:
   - go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-  - travis_wait 60 nuclei -l urls.txt -o nuclei_output.txt
+  - travis_wait 60 nuclei -l urls.txt -o nuclei_output.txt -es info
